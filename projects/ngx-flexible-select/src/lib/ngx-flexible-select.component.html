@@ -1,0 +1,42 @@
+<div class="ngx-flexible-select ngx-flexible-select_sm"
+    [ngClass]="{ 'ngx-flexible-select_has-value': selected !== null && selected !== undefined ? true : false, 
+        'ngx-flexible-select_opened': isOpened && !selectDisabled, 
+        'ngx-flexible-select_empty': !options || !options.length,
+        'ngx-flexible-select_focus-searh': isFocusSearh
+        }"
+    (keydown)="keyDown($event)" 
+    (keypress)="keyPress($event)" 
+    (click)="open($event)"
+    
+>
+    <div class="ngx-flexible-select__container">
+        <div class="ngx-flexible-select__inner-wrapper">
+            <div class="ngx-flexible-select__value">
+              <ng-content select="[value-text]"></ng-content>
+            </div>
+            <div class="ngx-flexible-select__placeholder">
+              <ng-content select="[label]"></ng-content>
+            </div>
+            <div (click)="openClose($event)" class="ngx-flexible-select__icon"></div>
+        </div>
+
+        <div (focus)="onSelectFocus($event)" (blur)="blurSearch()" [tabindex]="isOpened && !selectDisabled ? -1 : 0" class="ngx-flexible-select__search-input">
+            <ng-content select="[search-input]"></ng-content>
+        </div>
+        <div [id]="selectId" [ngClass]="{'ngx-flexible-select_opened': isOpened && !selectDisabled, 'ngx-flexible-select_empty': !options || !options.length}"
+            class="ngx-flexible-select__options-wraped">
+            <div *ngIf="!isNeedHideOption"
+                class="ngx-flexible-select__options ngx-flexible-select-options"
+                role="combobox" aria-haspopup="true" aria-expanded="false"
+                (keydown)="keyDown($event)" 
+            >
+                <div (mousewheel)="onMouseWheal($event)"
+                (scroll)="makeLoadMore($event)"
+                    class="ngx-flexible-select__options-container">
+                    <ng-content></ng-content>
+                </div>
+                <ng-content select="[button]"></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { NgxFlexibleSelectModule } from 'ngx-flexible-select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxFlexibleSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

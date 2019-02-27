@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-flexible-select": [
+        "dist/ngx-flexible-select"
+      ],
+      "ngx-flexible-select/*": [
+        "dist/ngx-flexible-select/*"
+      ]
+    }
   }
 }
