@@ -1,9 +1,33 @@
+<section id="demo">
+  <img class="icons" src="./assets/angular-icon-1.svg" />
+  <h1>ngx-flexible-select - the most flexible angular select</h1>
+  <br />
+  <h2>Simple select</h2>
+  <ngx-flexible-select [(ngModel)]="title">
+    <div value-text>{{ title }}</div>
+    <div label>Some select</div>
+    <ngx-flexible-select-option value="Some1">Some1</ngx-flexible-select-option>
+    <ngx-flexible-select-option value="Some2">Some2</ngx-flexible-select-option>
+    <ngx-flexible-select-option value="Some4">Some4</ngx-flexible-select-option>
+  </ngx-flexible-select>
 
-<ngx-flexible-select [(ngModel)]="title">
-  <div value-text>{{title}}</div>
-  <div label>Some select</div>
-  <ngx-flexible-select-option value="Some1">Some1</ngx-flexible-select-option>
-  <ngx-flexible-select-option value="Some2">Some2</ngx-flexible-select-option>
-  <ngx-flexible-select-option value="Some4">Some4</ngx-flexible-select-option>
-</ngx-flexible-select>
+  <h2>Select with search input</h2>
+  <ngx-flexible-select [(ngModel)]="title">
+    <div value-text>{{ title }}</div>
+    <div label>Some select</div>
+    <input search-input placeholder="Search address" />
+    <ngx-flexible-select-option value="Some1">Some1</ngx-flexible-select-option>
+    <ngx-flexible-select-option value="Some2">Some2</ngx-flexible-select-option>
+    <ngx-flexible-select-option value="Some4">Some4</ngx-flexible-select-option>
+  </ngx-flexible-select>
 
+  <h2>Select with Button</h2>
+  <ngx-flexible-select [(ngModel)]="title">
+    <div value-text>{{ title }}</div>
+    <div label>Some select</div>
+    <ngx-flexible-select-option value="Some1">Some1</ngx-flexible-select-option>
+    <ngx-flexible-select-option value="Some2">Some2</ngx-flexible-select-option>
+    <ngx-flexible-select-option value="Some4">Some4</ngx-flexible-select-option>
+    <button button>Show alert</button>
+  </ngx-flexible-select>
+</section>
