@@ -10,7 +10,7 @@ For detailed explanation on how things work, checkout the [DEMO](https://andreys
 ## install
 
 ``` bash
-npm install stf-vue-select --save
+npm install ngx-flexible-select --save
 
 
 ```
