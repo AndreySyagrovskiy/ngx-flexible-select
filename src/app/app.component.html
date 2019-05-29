@@ -13,8 +13,8 @@
   <ngx-flexible-select [(ngModel)]="address">
     <div value-text *ngIf="address">{{address.address}} {{address.house}} {{address.city}}</div>
     <div label>Your address</div>
-    <input search-input placeholder="Search address" />
-    <ngx-flexible-select-option *ngFor="let  item of addressList; trackBy: trackBy" [value]="item">{{item.address}}, {{item.house}}, {{item.flat}}, {{item.city}}, {{item.country}}</ngx-flexible-select-option>
+    <input search-input (keyup)="search($event)" placeholder="Search address" />
+    <ngx-flexible-select-option *ngFor="let  item of filteredAddressList; trackBy: trackBy" [value]="item">{{item.address}}, {{item.house}}, {{item.flat}}, {{item.city}}, {{item.country}}</ngx-flexible-select-option>
   </ngx-flexible-select>
 
   <h2>Select with Button</h2>

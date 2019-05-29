@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   address = null;
@@ -34,8 +34,31 @@ export class AppComponent {
     }
   ];
 
+  filteredAddressList = [];
+
   helloWorldAlert(name: string) {
     alert(`Hello, ${name}!`);
+  }
+
+  ngOnInit() {
+    this.filteredAddressList.push(...this.addressList);
+  }
+
+  search(event) {
+    const value = event.target.value.toLowerCase();
+    this.filteredAddressList = this.addressList.filter(address => {
+      if (
+        address.address.toLowerCase().indexOf(value) !== -1 ||
+        address.country.toLowerCase().indexOf(value) !== -1 ||
+        address.city.toLowerCase().indexOf(value) !== -1 ||
+        address.house.toLowerCase().indexOf(value) !== -1 ||
+        address.flat.toLowerCase().indexOf(value) !== -1
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    });
   }
 
   trackBy(index, item) {
