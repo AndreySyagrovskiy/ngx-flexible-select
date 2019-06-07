@@ -1,6 +1,6 @@
 {
   "name": "ngx-flexible-select",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "repository": {
     "type" : "git",
     "url" : "https://github.com/AndreySyagrovskiy/ngx-flexible-select"
@@ -12,5 +12,16 @@
   },
   "devDependencies": {
     "tslib": "^1.9.0"
-  }
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular4",
+    "angular6",
+    "angular7",
+    "angular8",
+    "select",
+    "dropdown",
+    "custom"
+  ]
 }
