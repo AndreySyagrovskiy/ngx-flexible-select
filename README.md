@@ -1,7 +1,4 @@
-# NgxFlexibleSelect
-
-
-> The most flexible and customized select
+# Angular ngx-flexible-select - the most flexible and customized UI select
 
 For detailed explanation on how things work, checkout the [DEMO](https://andreysyagrovskiy.github.io/ngx-flexible-select/dist/ngx-flexible-select-demo/)
 
